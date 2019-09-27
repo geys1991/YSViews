@@ -5,6 +5,8 @@ workspace 'YSViews.xcworkspace'
 
 target 'YSViewsCollector' do
   project 'YSViewsCollector/YSViewsCollector.xcodeproj'
+  
   pod 'SnapKit'
-
+  pod 'Then'
+  
 end

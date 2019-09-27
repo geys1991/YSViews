@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09885A6C233DED3A00489E74 /* YSMenuItemContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */; };
+		09885A6E233DF05400489E74 /* YSMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */; };
 		09AC050E233DDF0A00CF4EDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC050D233DDF0A00CF4EDD /* AppDelegate.swift */; };
 		09AC0512233DDF0A00CF4EDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC0511233DDF0A00CF4EDD /* ViewController.swift */; };
 		09AC0515233DDF0A00CF4EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AC0513233DDF0A00CF4EDD /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSMenuItemContainerView.swift; sourceTree = "<group>"; };
+		09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMenuItemViewController.swift; sourceTree = "<group>"; };
 		09AC050A233DDF0A00CF4EDD /* YSViewsCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSViewsCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AC050D233DDF0A00CF4EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09AC0511233DDF0A00CF4EDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09885A6A233DED1A00489E74 /* ViewsCollector */ = {
+			isa = PBXGroup;
+			children = (
+				09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */,
+				09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */,
+			);
+			path = ViewsCollector;
+			sourceTree = "<group>";
+		};
 		09AC0501233DDF0A00CF4EDD = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 		09AC050C233DDF0A00CF4EDD /* YSViewsCollector */ = {
 			isa = PBXGroup;
 			children = (
+				09885A6A233DED1A00489E74 /* ViewsCollector */,
 				09AC050D233DDF0A00CF4EDD /* AppDelegate.swift */,
 				09AC0511233DDF0A00CF4EDD /* ViewController.swift */,
 				09AC0513233DDF0A00CF4EDD /* Main.storyboard */,
@@ -324,6 +338,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09885A6E233DF05400489E74 /* YSMenuItemViewController.swift in Sources */,
+				09885A6C233DED3A00489E74 /* YSMenuItemContainerView.swift in Sources */,
 				09AC0512233DDF0A00CF4EDD /* ViewController.swift in Sources */,
 				09AC050E233DDF0A00CF4EDD /* AppDelegate.swift in Sources */,
 			);

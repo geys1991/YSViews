@@ -43,6 +43,17 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let index = indexPath.row
+    switch index {
+    case 0:
+      let menuItemVC = YSMenuItemViewController()
+      navigationController?.pushViewController(menuItemVC, animated: true)
+    default:
+      return
+    }
+  }
+  
   func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
     return UIView(frame: .zero)
   }

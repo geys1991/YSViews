@@ -233,13 +233,16 @@
 				TargetAttributes = {
 					09AC0509233DDF0A00CF4EDD = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					09AC051F233DDF0D00CF4EDD = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 						TestTargetID = 09AC0509233DDF0A00CF4EDD;
 					};
 					09AC052A233DDF0D00CF4EDD = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 						TestTargetID = 09AC0509233DDF0A00CF4EDD;
 					};
 				};

@@ -11,11 +11,12 @@ import SnapKit
 
 enum YSViewTitle: String {
   case menuView = "YSMenuView"
+  case doubleSideSliderView = "YSDoubleSideSliderView"
 }
 
 class ViewController: UIViewController {
   
-  private lazy var dataSource: [YSViewTitle] = [.menuView]
+  private lazy var dataSource: [YSViewTitle] = [.menuView, .doubleSideSliderView]
   
   private lazy var tableView: UITableView = {
     let tableView = UITableView()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = "首页"
     view.backgroundColor = UIColor.white
     initSubviews()
   }
@@ -49,6 +51,10 @@ extension ViewController: UITableViewDelegate {
     case 0:
       let menuItemVC = YSMenuItemViewController()
       navigationController?.pushViewController(menuItemVC, animated: true)
+      
+    case 1:
+      let doubleSlidlerVC = YSDoubleSideSliderViewController()
+      navigationController?.pushViewController(doubleSlidlerVC, animated: true)
     default:
       return
     }

@@ -52,7 +52,6 @@ class YSDoubleSideSliderView: UIView {
   // MARK: action method
   
   @objc func dotPanAction(_ recognizer: UIPanGestureRecognizer) {
-    
     let point = recognizer.translation(in: self)
     if let gestureView = recognizer.view {
       let moveToPoint = CGPoint(x: gestureView.center.x + point.x, y: gestureView.center.y)
@@ -64,7 +63,6 @@ class YSDoubleSideSliderView: UIView {
     }
     
     if recognizer.state == .changed {
-      
       if let blockCenterPoint = recognizer.view?.center {
         let dotViewCenterPoint = dotView.center
         let distance = blockCenterPoint.x - dotViewCenterPoint.x
@@ -81,19 +79,18 @@ class YSDoubleSideSliderView: UIView {
         }
       }
     }
-    
   }
   
   // MARK: private method
   
-  func gestureConfig() {
+  private func gestureConfig() {
     let panGesture = UIPanGestureRecognizer(target: self, action: #selector(dotPanAction(_:)))
     sliderDot.addGestureRecognizer(panGesture)
   }
   
   // MARK: init subviews
   
-  func initSubviews() {
+  private func initSubviews() {
     
     leftSliderView.setThumbImage(dotImage, for: .normal)
     rightSliderView.setThumbImage(dotImage, for: .normal)

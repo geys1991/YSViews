@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */; };
+		09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */; };
+		09526D15239E22C400A74E6E /* image_littleAnimal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09526D14239E22C400A74E6E /* image_littleAnimal.jpg */; };
 		09885A6C233DED3A00489E74 /* YSMenuItemContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */; };
 		09885A6E233DF05400489E74 /* YSMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */; };
 		098A6A32238FAFD700707725 /* YSDoubleSideSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A6A31238FAFD700707725 /* YSDoubleSideSliderView.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageViewController.swift; sourceTree = "<group>"; };
+		09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageView.swift; sourceTree = "<group>"; };
+		09526D14239E22C400A74E6E /* image_littleAnimal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_littleAnimal.jpg; sourceTree = "<group>"; };
 		09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSMenuItemContainerView.swift; sourceTree = "<group>"; };
 		09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMenuItemViewController.swift; sourceTree = "<group>"; };
 		098A6A31238FAFD700707725 /* YSDoubleSideSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSDoubleSideSliderView.swift; sourceTree = "<group>"; };
@@ -54,9 +60,9 @@
 		09AC052F233DDF0D00CF4EDD /* YSViewsCollectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSViewsCollectorUITests.swift; sourceTree = "<group>"; };
 		09AC0531233DDF0D00CF4EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E8AE932390EBC7007F3657 /* YSDoubleSideSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSDoubleSideSliderViewController.swift; sourceTree = "<group>"; };
+		18204F62625892461D3979B9 /* Pods-YSViewsCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSViewsCollector.release.xcconfig"; path = "Target Support Files/Pods-YSViewsCollector/Pods-YSViewsCollector.release.xcconfig"; sourceTree = "<group>"; };
+		2055D735CF0D5866F027BB08 /* Pods-YSViewsCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSViewsCollector.debug.xcconfig"; path = "Target Support Files/Pods-YSViewsCollector/Pods-YSViewsCollector.debug.xcconfig"; sourceTree = "<group>"; };
 		339FAB7B82408BA82740F51A /* Pods_YSViewsCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSViewsCollector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83BCBE65A411ADD45FEEB0E8 /* Pods-YSViewsCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSViewsCollector.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-YSViewsCollector/Pods-YSViewsCollector.release.xcconfig"; sourceTree = "<group>"; };
-		FE19502B2211346D17CC6D3B /* Pods-YSViewsCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSViewsCollector.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-YSViewsCollector/Pods-YSViewsCollector.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09526D11239E22AB00A74E6E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				09526D14239E22C400A74E6E /* image_littleAnimal.jpg */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		09885A6A233DED1A00489E74 /* Collector */ = {
 			isa = PBXGroup;
 			children = (
 				09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */,
 				09E8AE932390EBC7007F3657 /* YSDoubleSideSliderViewController.swift */,
+				09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -99,6 +114,7 @@
 			children = (
 				09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */,
 				098A6A31238FAFD700707725 /* YSDoubleSideSliderView.swift */,
+				09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,8 +126,8 @@
 				09AC0523233DDF0D00CF4EDD /* YSViewsCollectorTests */,
 				09AC052E233DDF0D00CF4EDD /* YSViewsCollectorUITests */,
 				09AC050B233DDF0A00CF4EDD /* Products */,
-				6E93852282B825DA97A9F109 /* Pods */,
 				4A3A45335A0ACBC56A5B5478 /* Frameworks */,
+				EF861FBA3748ED8A6A8D5ECA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +144,7 @@
 		09AC050C233DDF0A00CF4EDD /* YSViewsCollector */ = {
 			isa = PBXGroup;
 			children = (
+				09526D11239E22AB00A74E6E /* Source */,
 				098A6A30238FAF6A00707725 /* Views */,
 				09885A6A233DED1A00489E74 /* Collector */,
 				09AC050D233DDF0A00CF4EDD /* AppDelegate.swift */,
@@ -165,13 +182,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6E93852282B825DA97A9F109 /* Pods */ = {
+		EF861FBA3748ED8A6A8D5ECA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FE19502B2211346D17CC6D3B /* Pods-YSViewsCollector.debug.xcconfig */,
-				83BCBE65A411ADD45FEEB0E8 /* Pods-YSViewsCollector.release.xcconfig */,
+				2055D735CF0D5866F027BB08 /* Pods-YSViewsCollector.debug.xcconfig */,
+				18204F62625892461D3979B9 /* Pods-YSViewsCollector.release.xcconfig */,
 			);
-			path = Pods;
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09526D15239E22C400A74E6E /* image_littleAnimal.jpg in Resources */,
 				09AC051A233DDF0C00CF4EDD /* LaunchScreen.storyboard in Resources */,
 				09AC0517233DDF0C00CF4EDD /* Assets.xcassets in Resources */,
 			);
@@ -354,8 +373,10 @@
 				09885A6E233DF05400489E74 /* YSMenuItemViewController.swift in Sources */,
 				09885A6C233DED3A00489E74 /* YSMenuItemContainerView.swift in Sources */,
 				098A6A32238FAFD700707725 /* YSDoubleSideSliderView.swift in Sources */,
+				09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */,
 				09E8AE942390EBC7007F3657 /* YSDoubleSideSliderViewController.swift in Sources */,
 				09AC0512233DDF0A00CF4EDD /* ViewController.swift in Sources */,
+				09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */,
 				09AC050E233DDF0A00CF4EDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,7 +540,7 @@
 		};
 		09AC0535233DDF0D00CF4EDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE19502B2211346D17CC6D3B /* Pods-YSViewsCollector.debug.xcconfig */;
+			baseConfigurationReference = 2055D735CF0D5866F027BB08 /* Pods-YSViewsCollector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,7 +560,7 @@
 		};
 		09AC0536233DDF0D00CF4EDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83BCBE65A411ADD45FEEB0E8 /* Pods-YSViewsCollector.release.xcconfig */;
+			baseConfigurationReference = 18204F62625892461D3979B9 /* Pods-YSViewsCollector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

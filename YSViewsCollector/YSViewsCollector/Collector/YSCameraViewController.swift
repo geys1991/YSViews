@@ -53,10 +53,12 @@ class YSCameraViewController: UIViewController {
     return false
   }
   
-  func changeCameraPosition() {
+  func changeCameraPosition(_ completion: ((_ position: AVCaptureDevice.Position) -> Void)?) {
+    
     guard let currentSession = session, let currentInput = input else {
       return
     }
+    
     let changedToPosition: AVCaptureDevice.Position = position == AVCaptureDevice.Position.back ? AVCaptureDevice.Position.front : AVCaptureDevice.Position.back
     
     if session == nil ||
@@ -87,6 +89,8 @@ class YSCameraViewController: UIViewController {
       
       device = changedDevice
       input = newInput
+      
+      completion?(position)
       
     } catch {
       currentSession.commitConfiguration()

@@ -25,8 +25,7 @@ class YSCameraCustomViewController: UIViewController {
   private lazy var changeCameraPositionButton: UIButton = UIButton().then { (changePosition) in
     changePosition.setTitleColor(UIColor.white, for: .normal)
     changePosition.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-    changePosition.setTitle("前置", for: .normal)
-    changePosition.setTitle("后置", for: .selected)
+    changePosition.setTitle("后置", for: .normal)
     changePosition.addTarget(self, action: #selector(changeCameraPositionAction), for: .touchUpInside)
   }
   
@@ -57,21 +56,31 @@ class YSCameraCustomViewController: UIViewController {
   
   @objc func switchFlashAction() {
     print("__\(#function)__")
-    cameraVC.changeFlashModeStatus { (torchMode) in
-      switch torchMode {
-      case .off:
-        self.switchFlashButton.setTitle("闪光 关", for: .normal)
-      case .on:
-        self.switchFlashButton.setTitle("闪光 开", for: .normal)
-      case .auto:
-        self.switchFlashButton.setTitle("闪光 自动", for: .normal)
+    cameraVC.changeFlashModeStatus { [weak self] (torchMode) in
+      if let strongSelf = self {
+        switch torchMode {
+        case .off:
+          strongSelf.switchFlashButton.setTitle("闪光 关", for: .normal)
+        case .on:
+          strongSelf.switchFlashButton.setTitle("闪光 开", for: .normal)
+        case .auto:
+          strongSelf.switchFlashButton.setTitle("闪光 自动", for: .normal)
+        }
       }
     }
   }
   
   @objc func changeCameraPositionAction() {
     print("__\(#function)__")
-    cameraVC.changeCameraPosition()
+    cameraVC.changeCameraPosition { [weak self] (position) in
+      if let strongSelf = self {
+        if position == .back {
+          strongSelf.changeCameraPositionButton.setTitle("后置", for: .normal)
+        } else if position == .front {
+          strongSelf.changeCameraPositionButton.setTitle("前置", for: .normal)
+        }
+      }
+    }
   }
   
   // MARK: init subviews

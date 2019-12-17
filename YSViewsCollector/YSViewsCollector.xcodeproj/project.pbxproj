@@ -19,6 +19,8 @@
 		09AC051A233DDF0C00CF4EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AC0518233DDF0C00CF4EDD /* LaunchScreen.storyboard */; };
 		09AC0525233DDF0D00CF4EDD /* YSViewsCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC0524233DDF0D00CF4EDD /* YSViewsCollectorTests.swift */; };
 		09AC0530233DDF0D00CF4EDD /* YSViewsCollectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC052F233DDF0D00CF4EDD /* YSViewsCollectorUITests.swift */; };
+		09B15AF123A0BDC0005EE4A8 /* YSCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B15AF023A0BDC0005EE4A8 /* YSCameraViewController.swift */; };
+		09B15AF323A0E26E005EE4A8 /* YSCameraCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B15AF223A0E26E005EE4A8 /* YSCameraCustomViewController.swift */; };
 		09E8AE942390EBC7007F3657 /* YSDoubleSideSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8AE932390EBC7007F3657 /* YSDoubleSideSliderViewController.swift */; };
 		B6AB90DAE899DAAB82296DA3 /* Pods_YSViewsCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339FAB7B82408BA82740F51A /* Pods_YSViewsCollector.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		09AC052B233DDF0D00CF4EDD /* YSViewsCollectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YSViewsCollectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AC052F233DDF0D00CF4EDD /* YSViewsCollectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSViewsCollectorUITests.swift; sourceTree = "<group>"; };
 		09AC0531233DDF0D00CF4EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B15AF023A0BDC0005EE4A8 /* YSCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSCameraViewController.swift; sourceTree = "<group>"; };
+		09B15AF223A0E26E005EE4A8 /* YSCameraCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSCameraCustomViewController.swift; sourceTree = "<group>"; };
 		09E8AE932390EBC7007F3657 /* YSDoubleSideSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSDoubleSideSliderViewController.swift; sourceTree = "<group>"; };
 		18204F62625892461D3979B9 /* Pods-YSViewsCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSViewsCollector.release.xcconfig"; path = "Target Support Files/Pods-YSViewsCollector/Pods-YSViewsCollector.release.xcconfig"; sourceTree = "<group>"; };
 		2055D735CF0D5866F027BB08 /* Pods-YSViewsCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSViewsCollector.debug.xcconfig"; path = "Target Support Files/Pods-YSViewsCollector/Pods-YSViewsCollector.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,12 +95,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09526D11239E22AB00A74E6E /* Source */ = {
+		09526D11239E22AB00A74E6E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				09526D14239E22C400A74E6E /* image_littleAnimal.jpg */,
 			);
-			path = Source;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		09885A6A233DED1A00489E74 /* Collector */ = {
@@ -105,6 +109,8 @@
 				09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */,
 				09E8AE932390EBC7007F3657 /* YSDoubleSideSliderViewController.swift */,
 				09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */,
+				09B15AF023A0BDC0005EE4A8 /* YSCameraViewController.swift */,
+				09B15AF223A0E26E005EE4A8 /* YSCameraCustomViewController.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -144,7 +150,7 @@
 		09AC050C233DDF0A00CF4EDD /* YSViewsCollector */ = {
 			isa = PBXGroup;
 			children = (
-				09526D11239E22AB00A74E6E /* Source */,
+				09526D11239E22AB00A74E6E /* Resource */,
 				098A6A30238FAF6A00707725 /* Views */,
 				09885A6A233DED1A00489E74 /* Collector */,
 				09AC050D233DDF0A00CF4EDD /* AppDelegate.swift */,
@@ -370,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B15AF323A0E26E005EE4A8 /* YSCameraCustomViewController.swift in Sources */,
 				09885A6E233DF05400489E74 /* YSMenuItemViewController.swift in Sources */,
 				09885A6C233DED3A00489E74 /* YSMenuItemContainerView.swift in Sources */,
 				098A6A32238FAFD700707725 /* YSDoubleSideSliderView.swift in Sources */,
@@ -377,6 +384,7 @@
 				09E8AE942390EBC7007F3657 /* YSDoubleSideSliderViewController.swift in Sources */,
 				09AC0512233DDF0A00CF4EDD /* ViewController.swift in Sources */,
 				09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */,
+				09B15AF123A0BDC0005EE4A8 /* YSCameraViewController.swift in Sources */,
 				09AC050E233DDF0A00CF4EDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

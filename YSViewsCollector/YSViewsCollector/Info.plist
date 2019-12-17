@@ -39,5 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+  <key>NSCameraUsageDescription</key>
+  <string>YSViews需要您的同意才能读取媒体资料库</string>
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>YSViews需要您的同意才能读取媒体资料库</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>YSViews需要您的同意才能读取媒体资料库</string>
 </dict>
 </plist>

@@ -52,6 +52,13 @@ class YSCameraCustomViewController: UIViewController {
   
   @objc func takePictureAction() {
     print("__\(#function)__")
+    cameraVC.takePicture { [weak self] (image) in
+      if let strongSelf = self {
+        let cameraResultVC = YSCameraResultViewController()
+        cameraResultVC.takenImage = image
+        strongSelf.navigationController?.pushViewController(cameraResultVC, animated: true)
+      }
+    }
   }
   
   @objc func switchFlashAction() {
@@ -122,8 +129,8 @@ class YSCameraCustomViewController: UIViewController {
         make.top.equalToSuperview()
         make.bottom.equalToSuperview()
       }
-      
     }
+    
     cameraVC.view.snp.makeConstraints { (make) in
       make.edges.equalToSuperview()
     }

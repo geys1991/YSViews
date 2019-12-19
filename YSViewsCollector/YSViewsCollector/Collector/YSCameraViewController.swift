@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreGraphics
 
 class YSCameraViewController: UIViewController {
   
@@ -129,7 +130,146 @@ class YSCameraViewController: UIViewController {
     }
   }
   
+  func takePicture(_ completion: ((_ takenImage: UIImage?) -> Void)?) {
+    guard let _ = session else {
+      return
+    }
+    if let videoConnection = captureConnection() {
+      videoConnection.videoOrientation = orientationForConnection()
+      imageOutPut?.captureStillImageAsynchronously(from: videoConnection, completionHandler: { [weak self] (sampleBuffer, error) in
+        if let strongSelf = self {
+          if let buffer = sampleBuffer {
+            if let imageData: Data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer) {
+              if let image = UIImage(data: imageData),
+                let takenImage = strongSelf.crop(image) {
+                let resImage = takenImage.fixOrientation()
+                completion?(resImage)
+              }
+            }
+          }
+        }
+      })
+    }
+  }
+  
   // MARK: private methods
+  
+  func crop(_ image: UIImage) -> UIImage? {
+    guard let currentPreviewLayer = previewLayer else {
+      return nil
+    }
+    guard let bounds = currentPreviewLayer.superlayer?.bounds else {
+      return nil
+    }
+    let outputRect = currentPreviewLayer.metadataOutputRectConverted(fromLayerRect: bounds)
+    
+    if let takenCGImage: CGImage = image.cgImage {
+      let cropRect = CGRect(x: outputRect.origin.x * CGFloat(takenCGImage.width),
+                            y: outputRect.origin.y * CGFloat(takenCGImage.height),
+                            width: outputRect.size.width * CGFloat(takenCGImage.width),
+                            height: outputRect.size.height * CGFloat(takenCGImage.height))
+      if let cropedImage: CGImage = takenCGImage.cropping(to: cropRect) {
+        let resImage = UIImage(cgImage: cropedImage, scale: 1, orientation: image.imageOrientation)
+        return resImage
+      }
+    }
+    return nil
+  }
+  
+  func captureConnection() -> AVCaptureConnection? {
+    guard let currentImageOutPut = imageOutPut else {
+      return nil
+    }
+    var videoConnection: AVCaptureConnection?
+    for connection in currentImageOutPut.connections {
+      for port in connection.inputPorts {
+        if port.mediaType == .video {
+          videoConnection = connection
+          break
+        }
+      }
+      if videoConnection != nil {
+        break
+      }
+    }
+    return videoConnection
+  }
+  
+  func orientationForConnection() -> AVCaptureVideoOrientation {
+    var videoOrientation: AVCaptureVideoOrientation = .portrait
+    
+    let statusBarOrientation = UIApplication.shared.statusBarOrientation
+    switch statusBarOrientation {
+    case .landscapeLeft:
+      videoOrientation = .landscapeLeft
+    case .landscapeRight:
+      videoOrientation = .landscapeRight
+    case .portraitUpsideDown:
+      videoOrientation = .portraitUpsideDown
+    default:
+      videoOrientation = .portrait
+    }
+    
+    return videoOrientation
+  }
+  
+  func fixImageOrientation(_ image: UIImage) -> UIImage? {
+    let orientation: UIImage.Orientation = image.imageOrientation
+    if orientation == .up {
+      return image
+    }
+    var transform = CGAffineTransform.identity
+    switch orientation {
+    case .down, .downMirrored:
+      transform = CGAffineTransform(translationX: image.size.width, y: image.size.height)
+      transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+    case .left, .leftMirrored:
+      transform = CGAffineTransform(translationX: image.size.width, y: 0)
+      transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+    case .right, .rightMirrored:
+      transform = CGAffineTransform(translationX: 0, y: image.size.height)
+      transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+    case .up, .upMirrored:
+      break
+    }
+    switch orientation {
+    case .upMirrored, .downMirrored:
+      transform = CGAffineTransform(translationX: image.size.width, y: 0)
+      transform = CGAffineTransform(scaleX: -1, y: 1)
+    case .leftMirrored, .rightMirrored:
+      transform = CGAffineTransform(translationX: image.size.height, y: 0)
+      transform = CGAffineTransform(scaleX: -1, y: 1)
+    case .up, .down, .left, .right:
+      break
+    }
+    
+    if let cgImage = image.cgImage,
+      let colorSpace = cgImage.colorSpace {
+      let ctx = CGContext(data: nil,
+                          width: Int(image.size.width),
+                          height: Int(image.size.height),
+                          bitsPerComponent: cgImage.bitsPerComponent,
+                          bytesPerRow: cgImage.bytesPerRow,
+                          space: colorSpace,
+                          bitmapInfo: cgImage.bitmapInfo.rawValue)
+      
+      ctx?.concatenate(transform)
+      switch image.imageOrientation {
+      case .left, .leftMirrored, .right, .rightMirrored:
+        ctx?.draw(cgImage, in: CGRect(x: 0, y: 0, width: image.size.height, height: image.size.width))
+        break
+      default:
+        ctx?.draw(cgImage, in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        break
+      }
+      
+      if let makedCGImage = ctx?.makeImage() {
+        let resImage = UIImage(cgImage: makedCGImage)
+        return resImage
+      }
+    }
+    return nil
+  }
   
   func configCameraSetting() {
     

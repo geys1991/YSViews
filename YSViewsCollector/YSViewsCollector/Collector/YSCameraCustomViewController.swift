@@ -11,6 +11,15 @@ import UIKit
 class YSCameraCustomViewController: UIViewController {
   
   private lazy var cameraVC = YSCameraViewController()
+  private lazy var cameraResultView = YSCameraResultView().then { (resultView) in
+    resultView.isHidden = true
+    resultView.hiddenCameraResultBlock = { [weak self] in
+      if let strongSelf = self {
+        strongSelf.cameraVC.start()
+      }
+    }
+  }
+  
   private lazy var preview: UIView = UIView().then { (view) in
     view.clipsToBounds = true
   }
@@ -54,9 +63,8 @@ class YSCameraCustomViewController: UIViewController {
     print("__\(#function)__")
     cameraVC.takePicture { [weak self] (image) in
       if let strongSelf = self {
-        let cameraResultVC = YSCameraResultViewController()
-        cameraResultVC.takenImage = image
-        strongSelf.navigationController?.pushViewController(cameraResultVC, animated: true)
+        strongSelf.cameraVC.stop()
+        strongSelf.showResultImage(false, image)
       }
     }
   }
@@ -86,6 +94,16 @@ class YSCameraCustomViewController: UIViewController {
         } else if position == .front {
           strongSelf.changeCameraPositionButton.setTitle("前置", for: .normal)
         }
+      }
+    }
+  }
+  
+  func showResultImage(_ isHidden: Bool, _ image: UIImage?) {
+    guard let takenImage = image else { return }
+    cameraResultView.isHidden = false
+    cameraResultView.showEffect(true) { [weak self] in
+      if let strongSelf = self {
+        strongSelf.cameraResultView.image = takenImage
       }
     }
   }
@@ -132,6 +150,21 @@ class YSCameraCustomViewController: UIViewController {
     }
     
     cameraVC.view.snp.makeConstraints { (make) in
+      make.edges.equalToSuperview()
+    }
+    
+    if #available(iOS 13, *) {
+      let windows = UIApplication.shared.windows
+      if windows.count > 0 {
+        let currentWindow: UIWindow = windows[0]
+        currentWindow.addSubview(cameraResultView)
+      }
+    } else {
+      if let keyWindow = UIApplication.shared.keyWindow {
+        keyWindow.addSubview(cameraResultView)
+      }
+    }
+    cameraResultView.snp.makeConstraints { (make) in
       make.edges.equalToSuperview()
     }
   }

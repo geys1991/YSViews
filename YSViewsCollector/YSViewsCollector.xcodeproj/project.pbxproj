@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		092F747923AA005900F5846E /* YSCameraResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F747823AA005900F5846E /* YSCameraResultViewController.swift */; };
+		094D997B23AC9F800020B680 /* YSCameraResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094D997A23AC9F800020B680 /* YSCameraResultView.swift */; };
 		09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */; };
 		09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */; };
 		09526D15239E22C400A74E6E /* image_littleAnimal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09526D14239E22C400A74E6E /* image_littleAnimal.jpg */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		092F747823AA005900F5846E /* YSCameraResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSCameraResultViewController.swift; sourceTree = "<group>"; };
+		094D997A23AC9F800020B680 /* YSCameraResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSCameraResultView.swift; sourceTree = "<group>"; };
 		09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageViewController.swift; sourceTree = "<group>"; };
 		09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageView.swift; sourceTree = "<group>"; };
 		09526D14239E22C400A74E6E /* image_littleAnimal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_littleAnimal.jpg; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */,
 				098A6A31238FAFD700707725 /* YSDoubleSideSliderView.swift */,
 				09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */,
+				094D997A23AC9F800020B680 /* YSCameraResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				09E8AE942390EBC7007F3657 /* YSDoubleSideSliderViewController.swift in Sources */,
 				0967DE3E23AB231800B3863E /* UIImage+fixOrientation.swift in Sources */,
 				092F747923AA005900F5846E /* YSCameraResultViewController.swift in Sources */,
+				094D997B23AC9F800020B680 /* YSCameraResultView.swift in Sources */,
 				09AC0512233DDF0A00CF4EDD /* ViewController.swift in Sources */,
 				09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */,
 				09B15AF123A0BDC0005EE4A8 /* YSCameraViewController.swift in Sources */,

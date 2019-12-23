@@ -43,7 +43,6 @@ class YSCameraViewController: UIViewController {
     if session != nil {
       session?.stopRunning()
       session = nil
-      position = .back
     }
   }
   

@@ -14,6 +14,7 @@ enum YSViewTitle: String {
   case doubleSideSliderView = "YSDoubleSideSliderView"
   case scaleScrollImageView = "YSScaleImageView"
   case cameraView = "YSCameraView"
+  case multiInputView = "YSMultiInputView"
 }
 
 class ViewController: UIViewController {
@@ -21,7 +22,8 @@ class ViewController: UIViewController {
   private lazy var dataSource: [YSViewTitle] = [.menuView,
                                                 .doubleSideSliderView,
                                                 .scaleScrollImageView,
-                                                .cameraView]
+                                                .cameraView,
+                                                .multiInputView]
   
   private lazy var tableView: UITableView = {
     let tableView = UITableView()
@@ -65,6 +67,9 @@ extension ViewController: UITableViewDelegate {
     case 3:
       let cameraVC = YSCameraCustomViewController()
       navigationController?.pushViewController(cameraVC, animated: true)
+    case 4:
+      let multiInputVC = YSMultiInputViewController()
+      navigationController?.pushViewController(multiInputVC, animated: true)
     default:
       return
     }

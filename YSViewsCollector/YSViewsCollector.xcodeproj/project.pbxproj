@@ -13,6 +13,9 @@
 		09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */; };
 		09526D15239E22C400A74E6E /* image_littleAnimal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09526D14239E22C400A74E6E /* image_littleAnimal.jpg */; };
 		0967DE3E23AB231800B3863E /* UIImage+fixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967DE3D23AB231800B3863E /* UIImage+fixOrientation.swift */; };
+		0981190F24C6EC0900B7E146 /* YSMultiInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981190E24C6EC0900B7E146 /* YSMultiInputViewController.swift */; };
+		0981191124C6EC3D00B7E146 /* YSMultiInputAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981191024C6EC3D00B7E146 /* YSMultiInputAlertView.swift */; };
+		0981191324C6EC5800B7E146 /* YSMultiInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981191224C6EC5800B7E146 /* YSMultiInputTextField.swift */; };
 		09885A6C233DED3A00489E74 /* YSMenuItemContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */; };
 		09885A6E233DF05400489E74 /* YSMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */; };
 		098A6A32238FAFD700707725 /* YSDoubleSideSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A6A31238FAFD700707725 /* YSDoubleSideSliderView.swift */; };
@@ -52,6 +55,9 @@
 		09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageView.swift; sourceTree = "<group>"; };
 		09526D14239E22C400A74E6E /* image_littleAnimal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_littleAnimal.jpg; sourceTree = "<group>"; };
 		0967DE3D23AB231800B3863E /* UIImage+fixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+fixOrientation.swift"; sourceTree = "<group>"; };
+		0981190E24C6EC0900B7E146 /* YSMultiInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMultiInputViewController.swift; sourceTree = "<group>"; };
+		0981191024C6EC3D00B7E146 /* YSMultiInputAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMultiInputAlertView.swift; sourceTree = "<group>"; };
+		0981191224C6EC5800B7E146 /* YSMultiInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMultiInputTextField.swift; sourceTree = "<group>"; };
 		09885A6B233DED3A00489E74 /* YSMenuItemContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSMenuItemContainerView.swift; sourceTree = "<group>"; };
 		09885A6D233DF05400489E74 /* YSMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMenuItemViewController.swift; sourceTree = "<group>"; };
 		098A6A31238FAFD700707725 /* YSDoubleSideSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSDoubleSideSliderView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				09B15AF023A0BDC0005EE4A8 /* YSCameraViewController.swift */,
 				09B15AF223A0E26E005EE4A8 /* YSCameraCustomViewController.swift */,
 				092F747823AA005900F5846E /* YSCameraResultViewController.swift */,
+				0981190E24C6EC0900B7E146 /* YSMultiInputViewController.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -137,6 +144,8 @@
 				098A6A31238FAFD700707725 /* YSDoubleSideSliderView.swift */,
 				09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */,
 				094D997A23AC9F800020B680 /* YSCameraResultView.swift */,
+				0981191024C6EC3D00B7E146 /* YSMultiInputAlertView.swift */,
+				0981191224C6EC5800B7E146 /* YSMultiInputTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -397,12 +406,15 @@
 				09885A6E233DF05400489E74 /* YSMenuItemViewController.swift in Sources */,
 				09885A6C233DED3A00489E74 /* YSMenuItemContainerView.swift in Sources */,
 				098A6A32238FAFD700707725 /* YSDoubleSideSliderView.swift in Sources */,
+				0981190F24C6EC0900B7E146 /* YSMultiInputViewController.swift in Sources */,
 				09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */,
+				0981191324C6EC5800B7E146 /* YSMultiInputTextField.swift in Sources */,
 				09E8AE942390EBC7007F3657 /* YSDoubleSideSliderViewController.swift in Sources */,
 				0967DE3E23AB231800B3863E /* UIImage+fixOrientation.swift in Sources */,
 				092F747923AA005900F5846E /* YSCameraResultViewController.swift in Sources */,
 				094D997B23AC9F800020B680 /* YSCameraResultView.swift in Sources */,
 				09AC0512233DDF0A00CF4EDD /* ViewController.swift in Sources */,
+				0981191124C6EC3D00B7E146 /* YSMultiInputAlertView.swift in Sources */,
 				09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */,
 				09B15AF123A0BDC0005EE4A8 /* YSCameraViewController.swift in Sources */,
 				09AC050E233DDF0A00CF4EDD /* AppDelegate.swift in Sources */,

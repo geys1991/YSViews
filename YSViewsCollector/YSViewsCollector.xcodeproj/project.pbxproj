@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092A279124CAB5EE0002E706 /* YSDoubleWaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A279024CAB5EE0002E706 /* YSDoubleWaveViewController.swift */; };
 		092F747923AA005900F5846E /* YSCameraResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F747823AA005900F5846E /* YSCameraResultViewController.swift */; };
 		094D997B23AC9F800020B680 /* YSCameraResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094D997A23AC9F800020B680 /* YSCameraResultView.swift */; };
 		09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092A279024CAB5EE0002E706 /* YSDoubleWaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSDoubleWaveViewController.swift; sourceTree = "<group>"; };
 		092F747823AA005900F5846E /* YSCameraResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSCameraResultViewController.swift; sourceTree = "<group>"; };
 		094D997A23AC9F800020B680 /* YSCameraResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSCameraResultView.swift; sourceTree = "<group>"; };
 		09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				09B15AF223A0E26E005EE4A8 /* YSCameraCustomViewController.swift */,
 				092F747823AA005900F5846E /* YSCameraResultViewController.swift */,
 				0981190E24C6EC0900B7E146 /* YSMultiInputViewController.swift */,
+				092A279024CAB5EE0002E706 /* YSDoubleWaveViewController.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				098A6A32238FAFD700707725 /* YSDoubleSideSliderView.swift in Sources */,
 				0981190F24C6EC0900B7E146 /* YSMultiInputViewController.swift in Sources */,
 				09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */,
+				092A279124CAB5EE0002E706 /* YSDoubleWaveViewController.swift in Sources */,
 				0981191324C6EC5800B7E146 /* YSMultiInputTextField.swift in Sources */,
 				09E8AE942390EBC7007F3657 /* YSDoubleSideSliderViewController.swift in Sources */,
 				0967DE3E23AB231800B3863E /* UIImage+fixOrientation.swift in Sources */,

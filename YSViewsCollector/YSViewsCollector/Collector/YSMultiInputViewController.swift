@@ -32,6 +32,4 @@ class YSMultiInputViewController: UIViewController {
       make.left.equalToSuperview().offset(40)
     }
   }
-
-  
 }

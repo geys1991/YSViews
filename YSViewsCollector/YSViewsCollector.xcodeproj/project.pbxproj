@@ -13,6 +13,8 @@
 		09526D0E239E1B8F00A74E6E /* YSScaleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */; };
 		09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */; };
 		09526D15239E22C400A74E6E /* image_littleAnimal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09526D14239E22C400A74E6E /* image_littleAnimal.jpg */; };
+		095B95BA24F78C48000822E6 /* YSExpandButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B95B924F78C48000822E6 /* YSExpandButtonViewController.swift */; };
+		095B95BC24F78C8D000822E6 /* UIButton+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B95BB24F78C8D000822E6 /* UIButton+Expand.swift */; };
 		0967DE3E23AB231800B3863E /* UIImage+fixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967DE3D23AB231800B3863E /* UIImage+fixOrientation.swift */; };
 		0981190F24C6EC0900B7E146 /* YSMultiInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981190E24C6EC0900B7E146 /* YSMultiInputViewController.swift */; };
 		0981191124C6EC3D00B7E146 /* YSMultiInputAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981191024C6EC3D00B7E146 /* YSMultiInputAlertView.swift */; };
@@ -56,6 +58,8 @@
 		09526D0D239E1B8F00A74E6E /* YSScaleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageViewController.swift; sourceTree = "<group>"; };
 		09526D0F239E1BA700A74E6E /* YSScaleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSScaleImageView.swift; sourceTree = "<group>"; };
 		09526D14239E22C400A74E6E /* image_littleAnimal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_littleAnimal.jpg; sourceTree = "<group>"; };
+		095B95B924F78C48000822E6 /* YSExpandButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSExpandButtonViewController.swift; sourceTree = "<group>"; };
+		095B95BB24F78C8D000822E6 /* UIButton+Expand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Expand.swift"; sourceTree = "<group>"; };
 		0967DE3D23AB231800B3863E /* UIImage+fixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+fixOrientation.swift"; sourceTree = "<group>"; };
 		0981190E24C6EC0900B7E146 /* YSMultiInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMultiInputViewController.swift; sourceTree = "<group>"; };
 		0981191024C6EC3D00B7E146 /* YSMultiInputAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMultiInputAlertView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0967DE3D23AB231800B3863E /* UIImage+fixOrientation.swift */,
+				095B95BB24F78C8D000822E6 /* UIButton+Expand.swift */,
 			);
 			path = Vender;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				092F747823AA005900F5846E /* YSCameraResultViewController.swift */,
 				0981190E24C6EC0900B7E146 /* YSMultiInputViewController.swift */,
 				092A279024CAB5EE0002E706 /* YSDoubleWaveViewController.swift */,
+				095B95B924F78C48000822E6 /* YSExpandButtonViewController.swift */,
 			);
 			path = Collector;
 			sourceTree = "<group>";
@@ -412,9 +418,11 @@
 				0981190F24C6EC0900B7E146 /* YSMultiInputViewController.swift in Sources */,
 				09526D10239E1BA700A74E6E /* YSScaleImageView.swift in Sources */,
 				092A279124CAB5EE0002E706 /* YSDoubleWaveViewController.swift in Sources */,
+				095B95BC24F78C8D000822E6 /* UIButton+Expand.swift in Sources */,
 				0981191324C6EC5800B7E146 /* YSMultiInputTextField.swift in Sources */,
 				09E8AE942390EBC7007F3657 /* YSDoubleSideSliderViewController.swift in Sources */,
 				0967DE3E23AB231800B3863E /* UIImage+fixOrientation.swift in Sources */,
+				095B95BA24F78C48000822E6 /* YSExpandButtonViewController.swift in Sources */,
 				092F747923AA005900F5846E /* YSCameraResultViewController.swift in Sources */,
 				094D997B23AC9F800020B680 /* YSCameraResultView.swift in Sources */,
 				09AC0512233DDF0A00CF4EDD /* ViewController.swift in Sources */,

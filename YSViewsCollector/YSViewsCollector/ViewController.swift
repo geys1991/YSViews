@@ -16,6 +16,7 @@ enum YSViewTitle: String {
   case cameraView = "YSCameraView"
   case multiInputView = "YSMultiInputView"
   case doubleWave = "YSDoubleWaveView"
+  case expandButtonView = "YSExpandButtonViewController"
 }
 
 class ViewController: UIViewController {
@@ -25,7 +26,8 @@ class ViewController: UIViewController {
                                                 .scaleScrollImageView,
                                                 .cameraView,
                                                 .multiInputView,
-                                                .doubleWave]
+                                                .doubleWave,
+                                                .expandButtonView]
   
   private lazy var tableView: UITableView = {
     let tableView = UITableView()
@@ -75,6 +77,9 @@ extension ViewController: UITableViewDelegate {
     case 5:
       let douwaveVC = YSDoubleWaveViewController()
       navigationController?.pushViewController(douwaveVC, animated: true)
+    case 6:
+      let expandButtonVC = YSExpandButtonViewController()
+      navigationController?.pushViewController(expandButtonVC, animated: true)
     default:
       return
     }
